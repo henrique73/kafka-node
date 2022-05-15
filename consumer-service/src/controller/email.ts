@@ -5,7 +5,6 @@ export default class EmailHandler {
   userRegistrationHandler = async () => {
     const emailService = new EmailService();
     try {
-      console.log('a');
       const consumer = kafka.consumer({ groupId: 'email-user' })
 
       await consumer.connect()
